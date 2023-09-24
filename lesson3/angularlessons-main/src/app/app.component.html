@@ -1,0 +1,10 @@
+<input nz-input placeholder="Type a name" [(ngModel)]="name" />
+<input nz-input placeholder="Type a description" [(ngModel)]="description" />
+<button nz-button (click)="addNewTodo()">Add todo</button>
+<div *ngFor="let item of todos">
+  <app-to-do-task
+    [name]="item.name"
+    [description]="item.description"
+    [deletion]="deleteTodo"
+  />
+</div>

@@ -1,0 +1,7 @@
+<p>{{ name }}</p>
+<p>{{ description }}</p>
+<!-- <p [ngStyle]="status ? { color: 'green' } : { color: 'red' }">{{ status }}</p> -->
+<p [ngClass]="status ? 'color-red' : 'color-green'">{{ status }}</p>
+
+<button (click)="changeStatus()">Change status</button>
+<button (click)="deletion(name)">Delete task</button>
