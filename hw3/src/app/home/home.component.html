@@ -1,0 +1,19 @@
+<div class="logo">
+  <p>Shop</p>
+</div>
+
+<div class="sections">
+  <ng-container *ngFor="let sectionIndex of [0, 1, 2, 3]; let i = index">
+    <button (click)="navigateToSection('section' + (i + 1))">
+      Go to  {{ i + 1 }}
+    </button>
+    <span>Clicks: {{ sectionClickCounts[i] }}</span>
+  </ng-container>
+</div>
+
+<!-- <div class="sections">
+    <button (click)="navigateToSection('section1')">Clothes</button>
+    <button (click)="navigateToSection('section2')">Accessories</button>
+    <button (click)="navigateToSection('section3')">Shoes</button>
+    <button (click)="navigateToSection('section4')">Bags</button>
+  </div> -->

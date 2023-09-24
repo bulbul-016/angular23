@@ -1,0 +1,30 @@
+<!-- <div class="section">
+    <h2>Section 1</h2>
+    <p>Button clicked: {{ clickCount }} times</p>
+    <button (click)="incrementClickCount()">Click Me</button>
+  </div>
+  
+   -->
+
+<div class="section">
+  <h2>Section 1</h2>
+
+  <div>
+    <input [(ngModel)]="newProduct.name" placeholder="Product Name" />
+    <input [(ngModel)]="newProduct.price" type="number" placeholder="Price" />
+    <input [(ngModel)]="newProduct.description" placeholder="Description" />
+    <input
+      [(ngModel)]="newProduct.quantity"
+      type="number"
+      placeholder="Quantity"
+    />
+    <button (click)="addProduct()">Add Product</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let product of section1Products">
+      {{ product.name }} - Price: ${{ product.price }} - Description:
+      {{ product.description }} - Quantity: {{ product.quantity }}
+    </li>
+  </ul>
+</div>
